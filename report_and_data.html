@@ -1,0 +1,2750 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Zach Keefer" />
+
+
+<title>Data</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">About this Site</a>
+</li>
+<li>
+  <a href="Experience.html">Team's Experience</a>
+</li>
+<li>
+  <a href="Exploratory_Analysis.html">Exploratory Analysis</a>
+</li>
+<li>
+  <a href="mailto:er2867@cumc.columbia.edu">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/er2867/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Data</h1>
+<h4 class="author"><em>Zach Keefer</em></h4>
+<h4 class="date"><em>12/3/2018</em></h4>
+
+</div>
+
+
+<pre class="r"><code>##Reading in the flu data.  Files were too large to query all at once
+flu_1 = read.csv(&quot;./data/flu_1_4.csv&quot;, skip = 3)
+
+flu_2 = read.csv(&quot;./data/flu_5_8.csv&quot;, skip = 3)
+
+flu_3 = read.csv(&quot;./data/flu_9_12.csv&quot;, skip = 3)
+
+flu_4 = read.csv(&quot;./data/flu_13_18.csv&quot;, skip = 3)</code></pre>
+<pre class="r"><code>##Binding the data rows
+flu_df = bind_rows(flu_1, flu_2, flu_3, flu_4) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  ##Creating an epiweek variable that is ordinal
+  mutate(week = as.character(week),
+         week = ifelse(week == &quot;1&quot;, &quot;01&quot;, week),
+         week = ifelse(week == &quot;2&quot;, &quot;02&quot;, week),
+         week = ifelse(week == &quot;3&quot;, &quot;03&quot;, week),
+         week = ifelse(week == &quot;4&quot;, &quot;04&quot;, week),
+         week = ifelse(week == &quot;5&quot;, &quot;05&quot;, week),
+         week = ifelse(week == &quot;6&quot;, &quot;06&quot;, week),
+         week = ifelse(week == &quot;7&quot;, &quot;07&quot;, week),
+         week = ifelse(week == &quot;8&quot;, &quot;08&quot;, week),
+         week = ifelse(week == &quot;9&quot;, &quot;09&quot;, week),
+         epiweek = str_c(year, week, sep = &quot;.&quot;),
+         epiweek = as.numeric(epiweek)) </code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre class="r"><code>tidy_flu = flu_df %&gt;% 
+  ##Tidy flu data set to use for visualizations
+  group_by(fluregion, epiweek) %&gt;% 
+  summarize(cases = sum(all_inf),
+            h1 = sum(ah1),
+            h3 = sum(ah3),
+            h5 = sum(ah5),
+            a_total = sum(inf_a),
+            b_total = sum(inf_b))</code></pre>
+<pre class="r"><code>countries = flu_df %&gt;% 
+  ##dataset to use to bind demographic data
+  group_by(fluregion, country) %&gt;% 
+  summarize(infections = sum(all_inf))</code></pre>
+<p>Reading in and cleaning demographic data</p>
+<pre class="r"><code>arrival_df = read_excel(&quot;./data/arrival_data.xls&quot;, skip = 3) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  select(country, country_code, x2012:x2014) %&gt;% 
+  gather(key = year, value = arrivals, x2012:x2014) %&gt;% 
+  group_by(country) %&gt;% 
+  summarize(mean_arrival = mean(arrivals))</code></pre>
+<pre class="r"><code>pop_df = read_excel(&quot;./data/pop_data.xls&quot;, skip = 3) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  select(country, country_code, x2012:x2014) %&gt;% 
+  gather(key = year, value = pop, x2012:x2014) %&gt;% 
+  group_by(country) %&gt;% 
+  summarize(mean_pop = mean(pop))</code></pre>
+<pre class="r"><code>drs_df = read_excel(&quot;./data/dr_per_100k_data.xls&quot;) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  mutate(drs_per_100k = as.numeric(drs_per_100k)) %&gt;% 
+  group_by(country) %&gt;% 
+  summarize(drs = mean(drs_per_100k))</code></pre>
+<p>Joining Demo data</p>
+<pre class="r"><code>country_demo = left_join(countries, pop_df, by = &quot;country&quot;)
+
+country_demo = left_join(country_demo, arrival_df, by = &quot;country&quot;)
+
+country_demo = left_join(country_demo, drs_df, by = &quot;country&quot;)</code></pre>
+<p>Tidy demo data df.</p>
+<pre class="r"><code>flu_region_demo = country_demo %&gt;% 
+  group_by(fluregion) %&gt;% 
+  summarize(infections = sum(infections),
+            population = sum(mean_pop, na.rm = TRUE),
+            arrivals = sum(mean_arrival, na.rm = TRUE),
+            drs_per_100k = mean(drs, na.rm = TRUE))</code></pre>
+<pre class="r"><code>flu_demo_df = left_join(tidy_flu, flu_region_demo, by = &quot;fluregion&quot;) %&gt;% 
+  mutate(cases_by_1k = (cases*1000)/population)</code></pre>
+<pre class="r"><code>flu_demo_df %&gt;% 
+  ggplot(aes(x = epiweek, y = cases_by_1k)) +
+  geom_line() +
+  facet_wrap(~ fluregion)</code></pre>
+<p><img src="report_and_data_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code>flu_demo_df %&gt;% 
+  filter(fluregion == &quot;Middle Africa&quot;) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">fluregion</th>
+<th align="right">epiweek</th>
+<th align="right">cases</th>
+<th align="right">h1</th>
+<th align="right">h3</th>
+<th align="right">h5</th>
+<th align="right">a_total</th>
+<th align="right">b_total</th>
+<th align="right">infections</th>
+<th align="right">population</th>
+<th align="right">arrivals</th>
+<th align="right">drs_per_100k</th>
+<th align="right">cases_by_1k</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.01</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.02</td>
+<td align="right">21</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001637</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.03</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000546</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.04</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000234</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.05</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000234</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.06</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.07</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000312</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.08</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.09</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000156</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.10</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.11</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.12</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.13</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.14</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.15</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.16</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.17</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.18</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.19</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.20</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.21</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.22</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.23</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000390</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.24</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.25</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.26</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.27</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000156</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.28</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.29</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.30</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.31</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.32</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000156</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.33</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000234</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.34</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000234</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.35</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.36</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.37</td>
+<td align="right">19</td>
+<td align="right">0</td>
+<td align="right">19</td>
+<td align="right">0</td>
+<td align="right">19</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001481</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.38</td>
+<td align="right">27</td>
+<td align="right">0</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">25</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002105</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.39</td>
+<td align="right">35</td>
+<td align="right">0</td>
+<td align="right">33</td>
+<td align="right">0</td>
+<td align="right">33</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002729</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.40</td>
+<td align="right">32</td>
+<td align="right">0</td>
+<td align="right">30</td>
+<td align="right">0</td>
+<td align="right">30</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002495</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.41</td>
+<td align="right">48</td>
+<td align="right">0</td>
+<td align="right">47</td>
+<td align="right">0</td>
+<td align="right">47</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0003742</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.42</td>
+<td align="right">45</td>
+<td align="right">0</td>
+<td align="right">36</td>
+<td align="right">0</td>
+<td align="right">36</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0003509</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.43</td>
+<td align="right">40</td>
+<td align="right">0</td>
+<td align="right">35</td>
+<td align="right">0</td>
+<td align="right">35</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0003119</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.44</td>
+<td align="right">33</td>
+<td align="right">0</td>
+<td align="right">29</td>
+<td align="right">0</td>
+<td align="right">30</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002573</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.45</td>
+<td align="right">36</td>
+<td align="right">0</td>
+<td align="right">30</td>
+<td align="right">0</td>
+<td align="right">31</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002807</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.46</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001325</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.47</td>
+<td align="right">23</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001793</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.48</td>
+<td align="right">28</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002183</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.49</td>
+<td align="right">27</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">11</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002105</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.50</td>
+<td align="right">21</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001637</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2012.51</td>
+<td align="right">43</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">27</td>
+<td align="right">16</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0003353</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2012.52</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.01</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">14</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.02</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.03</td>
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001559</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.04</td>
+<td align="right">18</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001403</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.05</td>
+<td align="right">19</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001481</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.06</td>
+<td align="right">18</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">14</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001403</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.07</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001325</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.08</td>
+<td align="right">23</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">10</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001793</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.09</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">12</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001949</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.10</td>
+<td align="right">21</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001637</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.11</td>
+<td align="right">26</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">20</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002027</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.12</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000624</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.13</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000936</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.14</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.15</td>
+<td align="right">11</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000858</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.16</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.17</td>
+<td align="right">27</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">17</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002105</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.18</td>
+<td align="right">26</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">18</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002027</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.19</td>
+<td align="right">29</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">21</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002261</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.20</td>
+<td align="right">26</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">11</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002027</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.21</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001247</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.22</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.23</td>
+<td align="right">21</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">12</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001637</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.24</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">11</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001325</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.25</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000390</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.26</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000624</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.27</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000546</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.28</td>
+<td align="right">11</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">10</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000858</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.29</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000936</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.30</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.31</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000546</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.32</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000468</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.33</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000624</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.34</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.35</td>
+<td align="right">28</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">26</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002183</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.36</td>
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">19</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001559</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.37</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">11</td>
+<td align="right">14</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001949</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.38</td>
+<td align="right">22</td>
+<td align="right">0</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">17</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001715</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.39</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000546</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.40</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000312</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.41</td>
+<td align="right">24</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">14</td>
+<td align="right">10</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001871</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.42</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001247</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.43</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.44</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001325</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.45</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">11</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.46</td>
+<td align="right">30</td>
+<td align="right">0</td>
+<td align="right">11</td>
+<td align="right">0</td>
+<td align="right">18</td>
+<td align="right">12</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002339</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.47</td>
+<td align="right">29</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">19</td>
+<td align="right">10</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002261</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.48</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">11</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001949</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.49</td>
+<td align="right">24</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001871</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.50</td>
+<td align="right">36</td>
+<td align="right">0</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">23</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002807</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2013.51</td>
+<td align="right">39</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">23</td>
+<td align="right">16</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0003041</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2013.52</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">12</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001325</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.01</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.02</td>
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">18</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001559</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.03</td>
+<td align="right">25</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">17</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001949</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.04</td>
+<td align="right">26</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">11</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002027</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.05</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.06</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001247</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.07</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000936</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.08</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.09</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.10</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">12</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000936</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.11</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000156</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.12</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.13</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.14</td>
+<td align="right">17</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">15</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001325</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.15</td>
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">20</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001559</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.16</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.17</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.18</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000390</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.19</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000624</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.20</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.21</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000468</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.22</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.23</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.24</td>
+<td align="right">29</td>
+<td align="right">0</td>
+<td align="right">23</td>
+<td align="right">0</td>
+<td align="right">23</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0002261</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.25</td>
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">17</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001559</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.26</td>
+<td align="right">21</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001637</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.27</td>
+<td align="right">14</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">4</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001092</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.28</td>
+<td align="right">11</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">7</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000858</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.29</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000390</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.30</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000390</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.31</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000156</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.32</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.33</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000468</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.34</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000156</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.35</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000234</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.36</td>
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001559</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.37</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000078</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.38</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000234</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.39</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000624</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.40</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000468</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.41</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000780</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.42</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.43</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000702</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.44</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.45</td>
+<td align="right">12</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">9</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000936</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.46</td>
+<td align="right">13</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001014</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.47</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">14</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001247</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.48</td>
+<td align="right">16</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">13</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001247</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.49</td>
+<td align="right">8</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">5</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0000624</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.50</td>
+<td align="right">19</td>
+<td align="right">0</td>
+<td align="right">15</td>
+<td align="right">0</td>
+<td align="right">16</td>
+<td align="right">3</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001481</td>
+</tr>
+<tr class="odd">
+<td align="left">Middle Africa</td>
+<td align="right">2014.51</td>
+<td align="right">15</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">8</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001170</td>
+</tr>
+<tr class="even">
+<td align="left">Middle Africa</td>
+<td align="right">2014.52</td>
+<td align="right">22</td>
+<td align="right">0</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">22</td>
+<td align="right">0</td>
+<td align="right">2111</td>
+<td align="right">128257284</td>
+<td align="right">1717667</td>
+<td align="right">9.178</td>
+<td align="right">0.0001715</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>tidy_flu_2 = flu_df %&gt;% 
+  mutate(week = as.numeric(week),
+         year = as.factor(year)) %&gt;% 
+  group_by(fluregion, year, week) %&gt;% 
+    summarize(cases = sum(all_inf),
+            h1 = sum(ah1),
+            h3 = sum(ah3),
+            h5 = sum(ah5),
+            a_total = sum(inf_a),
+            b_total = sum(inf_b)) %&gt;% 
+  left_join(flu_region_demo, by = &quot;fluregion&quot;) %&gt;% 
+  mutate(cases_by_1k = (cases*1000)/population)
+
+tidy_flu_2 %&gt;% 
+  ggplot(aes(x = week, y = cases_by_1k, color = year)) +
+  geom_line() +
+  facet_wrap(~ fluregion)</code></pre>
+<p><img src="report_and_data_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
