@@ -36,6 +36,10 @@ Report, Statistical Analyses, Webpage, and Screencast
 
 *[The WHO FluNet](http://apps.who.int/flumart/Default?ReportNo=12).*
 
+*[The WHO General Health Observatory data repository](http://apps.who.int/gho/data/node.main.HWF10?lang=en).*
+
+*[The World Bank Open Data](http://apps.who.int/gho/data/node.main.HWF10?lang=en).*
+
 *[CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)* (For demographic data - obtained through scraping)
 
 **Planned analyses:**
