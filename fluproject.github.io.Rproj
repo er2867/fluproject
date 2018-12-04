@@ -13,4 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-WebsitePath: Website_work
+WebsitePath: ~/p8105/fluproject.github.io
