@@ -2,7 +2,7 @@
 title: "About this Site"
 ---
 
-This website was made using Rstudio by Tom Carpino. 
+This website was made using Rstudio by Tom Carpino and Elliot Rozen. 
 
 You can find out more about the team in the [Team's Experience](Experience.html) tab. 
 
