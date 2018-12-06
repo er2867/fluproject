@@ -2,15 +2,13 @@
 title: "About this Site"
 ---
 
-This website was made using Rstudio by Tom Carpino and Elliot Rozen. 
-
-You can find out more about the team in the [Team's Experience](Experience.html) tab. 
+This website was made using Rstudio by Tom Carpino and Elliot Rozen. You can find out more about the team in the [Team](Experience.html) tab. 
 
 ### Links and Information
 
 For the Repository for the website, Elliot's Github account can be found [here](https://github.com/er2867), which is also listed in the top right Github icon.  
 
-For, You can email Tom email using the mail icon tool on the top right. 
+For, contact information, can email Elliot directly using the mail icon tool on the top right. You can find other contact information in the [Team](Experience.html) tab.  
 
 <iframe width="900" height="380" src="https://www.youtube.com/embed/hqCVB0tOSVQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
