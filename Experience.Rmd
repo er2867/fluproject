@@ -19,13 +19,11 @@ The team consists of four MPH students, experienced in infectious disease epidem
 #Zach#
 <img src="images/Zach.jpeg" style = "width:20%">
 
-[LinkedIn](https://www.linkedin.com/in/georgekeefer/)
-
-[Email](mailto:gwk2111@cumc.columbia.edu)
+    * [LinkedIn](https://www.linkedin.com/in/georgekeefer/)
+    * [Email](mailto:gwk2111@cumc.columbia.edu)
 
 #Elliot#
 <img src="images/Me.png" style = "width:20%">
 
-[LinkedIn](https://www.linkedin.com/in/elliot-rozen-8168118a/)
-
-[Email](mailto:er2867@cumc.columbia.edu)
+    * [LinkedIn](https://www.linkedin.com/in/elliot-rozen-8168118a/)
+    * [Email](mailto:er2867@cumc.columbia.edu)
