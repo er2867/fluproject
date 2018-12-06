@@ -2,7 +2,7 @@
 title: "Epidemic Threshold"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
 editor_options: 
   chunk_output_type: inline
@@ -24,93 +24,85 @@ library(devtools)
 serfling = read_csv("Cleaned_data/serfling.csv")  
 ```
 
-Column {data-width=600}
+Row {data-width=600}
 -----------------------------------------------------------------------
 
-### North America Epidemic Threshold 
+### North America  
 
 ```{r, echo=FALSE}
 serfling %>%  
   filter(fluregion == "North America") %>% 
   mutate(year = as.character(year)) %>% 
-  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+  plot_ly(x = ~date, y = ~cases_by_100k, name = "Incidence", type = "scatter", mode = "lines + marker",
          alpha = 0.5
         ) %>% 
-  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+  add_trace(y = ~y0_ul, color = "Threshold", name = "Threshold", line = list(color = 'rgb(205, 12, 24)'))
 ```
 
-Column {data-width=600}
------------------------------------------------------------------------
-
-### Northern Europe Epidemic Threshold
+### Northern Europe  
 
 ```{r, echo=FALSE}
 serfling %>%  
   filter(fluregion == "Northern Europe") %>% 
   mutate(year = as.character(year)) %>% 
-  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+  plot_ly(x = ~date, y = ~cases_by_100k, name = "Incidence", type = "scatter", mode = "lines + marker",
          alpha = 0.5
         ) %>% 
-  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+  add_trace(y = ~y0_ul, color = "Threshold", name = "Threshold", line = list(color = 'rgb(205, 12, 24)'))
 ```
 
-Column {data-width=600}
------------------------------------------------------------------------
 
-### Oceania Melanesia Polynesia Epidemic Threshold 
+### Oceania Melanesia Polynesia  
 
 ```{r, echo=FALSE}
 serfling %>%  
   filter(fluregion == "Oceania Melanesia Polynesia") %>% 
   mutate(year = as.character(year)) %>% 
-  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+  plot_ly(x = ~date, y = ~cases_by_100k, name = "Incidence", type = "scatter", mode = "lines + marker",
          alpha = 0.5
         ) %>% 
-  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+  add_trace(y = ~y0_ul, color = "Threshold", name = "Threshold", line = list(color = 'rgb(205, 12, 24)'))
 ```
 
-Column {data-width=600}
+
+Row {data-width=600}
 -----------------------------------------------------------------------
 
-### Temperate South America Epidemic Threshold
+### Temperate South America  
 
 ```{r, echo=FALSE}
 serfling %>%  
   filter(fluregion == "Temperate South America") %>% 
   mutate(year = as.character(year)) %>% 
-  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+  plot_ly(x = ~date, y = ~cases_by_100k, name = "Incidence", type = "scatter", mode = "lines + marker",
          alpha = 0.5
         ) %>% 
-  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+  add_trace(y = ~y0_ul, color = "Threshold", name = "Threshold", line = list(color = 'rgb(205, 12, 24)'))
 ```
 
-Column {data-width=600}
------------------------------------------------------------------------
 
-### Eastern Asia Epidemic Threshold
+### Eastern Asia  
 
 ```{r, echo=FALSE}
 serfling %>%  
   filter(fluregion == "Eastern Asia") %>% 
   mutate(year = as.character(year)) %>% 
-  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+ plot_ly(x = ~date, y = ~cases_by_100k, name = "Incidence", type = "scatter", mode = "lines + marker",
          alpha = 0.5
         ) %>% 
-  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+  add_trace(y = ~y0_ul, color = "Threshold", name = "Threshold", line = list(color = 'rgb(205, 12, 24)'))
 ```
 
 
-Column {data-width=600}
------------------------------------------------------------------------
 
-### Southern Africa Epidemic Threshold
+### Southern Africa  
 
 ```{r, echo=FALSE}
 serfling %>%  
   filter(fluregion == "Southern Africa") %>% 
   mutate(year = as.character(year)) %>% 
-  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+  plot_ly(x = ~date, y = ~cases_by_100k, name = "Incidence", type = "scatter", mode = "lines + marker",
          alpha = 0.5
         ) %>% 
-  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+  add_trace(y = ~y0_ul, color = "Threshold", name = "Threshold", line = list(color = 'rgb(205, 12, 24)'))
 ```

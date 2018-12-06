@@ -2,7 +2,7 @@
 title: "Incidence by Year"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
 editor_options: 
   chunk_output_type: inline
@@ -24,10 +24,10 @@ library(devtools)
 flu = read_csv("Cleaned_data/flu.csv")  
 ```
 
-Column {data-width=400}
+Rows {data-width=600}
 -----------------------------------------------------------------------
 
-##North America Incidence by Year ##
+### North America 
 
 ```{r, echo=FALSE}
 flu %>%  
@@ -39,10 +39,8 @@ flu %>%
         
 ```
 
-Column {data-width=400}
------------------------------------------------------------------------
 
-## Northern Europe Incidence by Year ##
+### Northern Europe 
 
 ```{r, echo=FALSE}
 flu %>%  
@@ -53,10 +51,8 @@ flu %>%
         )
 ```
 
-Column {data-width=400}
------------------------------------------------------------------------
 
-## Oceania Melanesia Polynesia By Year ##
+### Oceania Melanesia Polynesia 
 
 ```{r, echo=FALSE}
 flu %>%  
@@ -67,10 +63,10 @@ flu %>%
         )
 ```
 
-Column {data-width=300}
+Rows {data-width=600}
 -----------------------------------------------------------------------
 
-## Temperate South America By Year ##
+### Temperate South America 
 
 ```{r, echo=FALSE}
 flu %>%  
@@ -81,10 +77,8 @@ flu %>%
         )
 ```
 
-Column {data-width=300}
------------------------------------------------------------------------
 
-## East Asia By Year ##
+### Eastern Asia 
 
 ```{r, echo=FALSE}
 flu %>%  
@@ -95,10 +89,8 @@ flu %>%
         )
 ```
 
-Column {data-width=300}
------------------------------------------------------------------------
 
-## Southern Africa By Year ##
+### Southern Africa 
 
 ```{r, echo=FALSE}
 flu %>%  
