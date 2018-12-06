@@ -12,14 +12,14 @@ title: Global Influenza Trends
 
 ### Important Information and Links 
 
-More information about the team can be found in the [Experience](Experience.html) tab. 
+More information about the team can be found in the [Team](Experience.html) tab. 
 
 The Key Findings for the report can be found in the [Report](report.html) tab.
 
-Elliot's GitHub account can be found [here](https://github.com/er2867), or the top right Github icon. His contact info can be found using the mail icon tool on the top right. 
+For the Repository utilized to construct the website can be found accessed [here](https://github.com/er2867/fluproject). The Repository utilized for data analysis and including our group's report can be accessed [here](https://github.com/mattperrotta/final_project)
 
 Our data files for this project can be found [here](https://drive.google.com/drive/folders/1FcazPStI8FsAdQDWsujyn_jsFByolMC0?usp=sharing).
 
 ### Website Creation 
 
-Information about this website was created can be found under the [About this Site](about.html) tab. 
+Information about this website was created can be found under the [Our Project](about.html) tab. 

@@ -16,7 +16,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:er2867@cumc.columbia.edu
     - icon: fa-github fa-lg
-      href: http://github.com/er2867/
+      href: https://github.com/mattperrotta/final_project
 output:
   html_document:
     theme: flatly
