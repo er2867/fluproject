@@ -7,22 +7,22 @@ title: "Our Team"
 The team consists of four MPH students, experienced in infectious disease epidemiology and biostatistics. Collectively, the team has worked in a variety of capacities at the NYC Department of Health, the Florida Department of Health, EcoHealth Alliance, and ICAP at Columbia University. Please feel free to reach out and connect with us. 
 
 #Tom#
-<img src = "images/Tom.jpg" style = "width:20%">
+<img src = "images/Tom.jpeg" style = "width:20%">
 
 [LinkedIn Profile](https://linkedin.com/in/tomcarpino/).
 
 #Matt#
-<img src = "images/Matt.jpg" style = "width:20%">
+<img src = "images/Matt.jpeg" style = "width:20%">
 
 [LinkedIn Profile](https://www.linkedin.com/in/matthew-perrotta-41275654/). 
 
 #Zach#
-<img src = "images/Zach.jpg" style = "width:20%">
+<img src = "images/Zach.jpeg" style = "width:20%">
 
 [LinkedIn Profile](https://www.linkedin.com/in/georgekeefer/). 
 
 #Elliot#
-<img src = "images/Me.jpg" style = "width:20%">
+<img src = "images/Me.png" style = "width:20%">
 
 [LinkedIn Profile](https://www.linkedin.com/in/elliot-rozen-8168118a/). 
 
