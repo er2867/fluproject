@@ -4,26 +4,30 @@ title: "About the Team"
 
 The team consists of four MPH students, experienced in infectious disease epidemiology and biostatistics. Collectively, the team has worked in a variety of capacities at the NYC Department of Health, the Florida Department of Health, EcoHealth Alliance, and ICAP at Columbia University. Please feel free to reach out and connect with us. 
 
-#Tom#
+##Tom##
 <img src="images/Tom.jpeg" style = "width:20%">
 
-    * [LinkedIn](https://linkedin.com/in/tomcarpino/)
-    * [Email](mailto:tc2899@cumc.columbia.edu)
+[LinkedIn](https://linkedin.com/in/tomcarpino/) 
+ 
+[Email](mailto:tc2899@cumc.columbia.edu)
 
-#Matt#
+##Matt##
 <img src="images/Matt.jpeg" style = "width:20%">
 
-    * [LinkedIn](https://www.linkedin.com/in/matthew-perrotta-41275654/)
-    * [Email](mailto:mp3653@cumc.columbia.edu)
+[LinkedIn](https://www.linkedin.com/in/matthew-perrotta-41275654/) 
 
-#Zach#
+[Email](mailto:mp3653@cumc.columbia.edu)
+
+##Zach##
 <img src="images/Zach.jpeg" style = "width:20%">
 
-    * [LinkedIn](https://www.linkedin.com/in/georgekeefer/)
-    * [Email](mailto:gwk2111@cumc.columbia.edu)
+[LinkedIn](https://www.linkedin.com/in/georgekeefer/) 
 
-#Elliot#
+[Email](mailto:gwk2111@cumc.columbia.edu)
+
+##Elliot##
 <img src="images/Me.png" style = "width:20%">
 
-    * [LinkedIn](https://www.linkedin.com/in/elliot-rozen-8168118a/)
-    * [Email](mailto:er2867@cumc.columbia.edu)
+[LinkedIn](https://www.linkedin.com/in/elliot-rozen-8168118a/) 
+
+[Email](mailto:er2867@cumc.columbia.edu)
