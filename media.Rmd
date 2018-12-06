@@ -2,10 +2,18 @@
 title: "Media"
 ---
 
+### News Media
 
+News sources can be an invaluable tool for the public health community - but can also be dangerous through the spread of misinformation from 'trusted' sources. Here's an example of flu represented in the media:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0Ct1xru4xVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Other Media
 
-TV shows, while commicly misrepresenting infectious diseases like influenza and SARS, provide a valuable service to the public health community. If you have a few minutes, please enjoy the following clips: 
+TV shows, while commicly misrepresenting infectious diseases like influenza and SARS, provide a valuable service to the public health community through raising awareness of diseases. If you have a few minutes, please enjoy the following clips: 
 
+Simpsons Flu:
 <iframe width="900" height="380" src="https://www.youtube.com/embed/hqCVB0tOSVQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+South Park SARS: 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VnNS4UxJsiw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
