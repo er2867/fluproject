@@ -4,27 +4,32 @@ title: "Report"
 
 This is our Key Findings from our Final Report. 
 
-The Final Report can be found in this Repo. 
+**Motivation:**
+Provide an overview of the project goals and motivation.
 
-Motivation: Provide an overview of the project goals and motivation.
+**Related work:** 
+Anything that inspired you, such as a paper, a web site, or something we discussed in class.
 
-Related work: Anything that inspired you, such as a paper, a web site, or something we discussed in class.
+**Initial questions:**
+What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
 
-Initial questions: What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
+**Data:**
+Source, scraping method, cleaning, etc.
 
-Data: Source, scraping method, cleaning, etc.
+**Exploratory analysis:** 
+Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
 
-Exploratory analysis: Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
+**Additional analysis:** 
+If you undertake formal statistical analyses, describe these in detail
 
-Additional analysis: If you undertake formal statistical analyses, describe these in detail
-
-Discussion: What were your findings? Are they what you expect? What insights into the data can you make?
+**Discussion:** 
+What were your findings? Are they what you expect? What insights into the data can you make?
 
 **Motivation:** 
-
 All four of us are in the Infectious Disease Epidemiology Concentration and are interested in becoming aquainted with ID Epi modeling in R. 
 
 Last year, in 2018, nearly 80,000 people died from the flu in the US alone. 
+
 _Check out the article [here](https://www.cnn.com/2018/09/26/health/flu-deaths-2017--2018-cdc-bn/index.html)._
 
 Many scholars argue that there is an impending 'global threat of avian flu' due to rapid globalization and urbanization. 
