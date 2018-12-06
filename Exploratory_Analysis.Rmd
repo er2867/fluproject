@@ -24,3 +24,7 @@ And by Influenza strain
 
 <img src="images/Flu_strain2.png" style = "width:100%">
 
+Lastly, we tested to see if the Incidence crossed an Epidemic Threshold utilizing Serfling Regression
+
+<img src="images/Flu_Thresh.png" style = "width:100%">
+

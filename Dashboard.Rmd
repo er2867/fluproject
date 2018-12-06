@@ -1,0 +1,110 @@
+---
+title: "Incidence by Year"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+editor_options: 
+  chunk_output_type: inline
+---
+ 
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(plotly)
+library(readxl)
+library(patchwork)
+library(devtools)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+flu = read_csv("Cleaned_data/flu.csv")  
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+##North America Incidence by Year ##
+
+```{r, echo=FALSE}
+flu %>%  
+  filter(fluregion == "North America") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~week, y = ~cases, color = ~year, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        )
+        
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+## Northern Europe Incidence by Year ##
+
+```{r, echo=FALSE}
+flu %>%  
+  filter(fluregion == "Northern Europe") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~week, y = ~cases, color = ~year, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        )
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+## Oceania Melanesia Polynesia By Year ##
+
+```{r, echo=FALSE}
+flu %>%  
+  filter(fluregion == "Oceania Melanesia Polynesia") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~week, y = ~cases, color = ~year, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        )
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+## Temperate South America By Year ##
+
+```{r, echo=FALSE}
+flu %>%  
+  filter(fluregion == "Temperate South America") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~week, y = ~cases, color = ~year, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        )
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+## East Asia By Year ##
+
+```{r, echo=FALSE}
+flu %>%  
+  filter(fluregion == "Eastern Asia") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~week, y = ~cases, color = ~year, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        )
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+## Southern Africa By Year ##
+
+```{r, echo=FALSE}
+flu %>%  
+  filter(fluregion == "Southern Africa") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~week, y = ~cases, color = ~year, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        )
+```

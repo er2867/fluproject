@@ -7,12 +7,14 @@ navbar:
       href: about.html
     - text: "Team"
       href: Experience.html
-    - text: "Exploratory Analysis"
+    - text: "Explore Our Data"
       href: Exploratory_Analysis.html
     - text: "Report"
-      href: report.html
-    - text: "Data Dashboard"
+      href: https://github.com/mattperrotta/final_project/blob/master/report_and_data.md
+    - text: "Incidence by Year Dashboard"
       href: Dashboard.html
+    - text: "Epidemic Threshold by Region"
+      href: Threshboard.html
     - text: "Media"
       href: media.html
     - icon: fa-envelope fa-lg

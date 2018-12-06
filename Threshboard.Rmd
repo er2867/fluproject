@@ -1,0 +1,116 @@
+---
+title: "Incidence by Year"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+editor_options: 
+  chunk_output_type: inline
+---
+ 
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(plotly)
+library(readxl)
+library(patchwork)
+library(devtools)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+serfling = read_csv("Cleaned_data/serfling.csv")  
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+##North America Epidemic Threshold ##
+
+```{r, echo=FALSE}
+serfling %>%  
+  filter(fluregion == "North America") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        ) %>% 
+  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+## Northern Europe Epidemic Threshold ##
+
+```{r, echo=FALSE}
+serfling %>%  
+  filter(fluregion == "Northern Europe") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        ) %>% 
+  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+```
+
+Column {data-width=400}
+-----------------------------------------------------------------------
+
+## Oceania Melanesia Polynesia Epidemic Threshold ##
+
+```{r, echo=FALSE}
+serfling %>%  
+  filter(fluregion == "Oceania Melanesia Polynesia") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        ) %>% 
+  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+## Temperate South America Epidemic Threshold ##
+
+```{r, echo=FALSE}
+serfling %>%  
+  filter(fluregion == "Temperate South America") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        ) %>% 
+  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+```
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+## Eastern Asia Epidemic Threshold ##
+
+```{r, echo=FALSE}
+serfling %>%  
+  filter(fluregion == "Eastern Asia") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        ) %>% 
+  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+```
+
+
+Column {data-width=300}
+-----------------------------------------------------------------------
+
+## Southern Africa Epidemic Threshold ##
+
+```{r, echo=FALSE}
+serfling %>%  
+  filter(fluregion == "Southern Africa") %>% 
+  mutate(year = as.character(year)) %>% 
+  plot_ly(x = ~date, y = ~cases_by_100k, type = "scatter", mode = "lines + marker",
+         alpha = 0.5
+        ) %>% 
+  add_trace(y = ~y0_ul, color = "Epidemic Threshold")
+```
