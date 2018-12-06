@@ -1,5 +1,5 @@
 ---
-title: "Incidence by Year"
+title: "Epidemic Threshold"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -24,10 +24,10 @@ library(devtools)
 serfling = read_csv("Cleaned_data/serfling.csv")  
 ```
 
-Column {data-width=400}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-##North America Epidemic Threshold ##
+### North America Epidemic Threshold 
 
 ```{r, echo=FALSE}
 serfling %>%  
@@ -39,10 +39,10 @@ serfling %>%
   add_trace(y = ~y0_ul, color = "Epidemic Threshold")
 ```
 
-Column {data-width=400}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-## Northern Europe Epidemic Threshold ##
+### Northern Europe Epidemic Threshold
 
 ```{r, echo=FALSE}
 serfling %>%  
@@ -54,10 +54,10 @@ serfling %>%
   add_trace(y = ~y0_ul, color = "Epidemic Threshold")
 ```
 
-Column {data-width=400}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-## Oceania Melanesia Polynesia Epidemic Threshold ##
+### Oceania Melanesia Polynesia Epidemic Threshold 
 
 ```{r, echo=FALSE}
 serfling %>%  
@@ -69,10 +69,10 @@ serfling %>%
   add_trace(y = ~y0_ul, color = "Epidemic Threshold")
 ```
 
-Column {data-width=300}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-## Temperate South America Epidemic Threshold ##
+### Temperate South America Epidemic Threshold
 
 ```{r, echo=FALSE}
 serfling %>%  
@@ -84,10 +84,10 @@ serfling %>%
   add_trace(y = ~y0_ul, color = "Epidemic Threshold")
 ```
 
-Column {data-width=300}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-## Eastern Asia Epidemic Threshold ##
+### Eastern Asia Epidemic Threshold
 
 ```{r, echo=FALSE}
 serfling %>%  
@@ -100,10 +100,10 @@ serfling %>%
 ```
 
 
-Column {data-width=300}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
-## Southern Africa Epidemic Threshold ##
+### Southern Africa Epidemic Threshold
 
 ```{r, echo=FALSE}
 serfling %>%  
