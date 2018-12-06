@@ -20,51 +20,23 @@ Work on infectious disease modeling that was extremely interesting to us include
 What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
 
 **Data:**
-We pulled our data directly from the website of different sources via CSV files from _[The WHO FluNet](http://apps.who.int/flumart/Default?ReportNo=12)_, the _[The WHO General Health Observatory data repository](http://apps.who.int/gho/data/node.main.HWF10?lang=en)_, and the _[The World Bank Open Data](http://apps.who.int/gho/data/node.main.HWF10?lang=en)_. 
-
-We scraped demographic data from the _[CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)_, but eventually decided this data would not be used in our final report and analyses. 
+We pulled our data directly from the website of different sources via CSV files from _[The WHO FluNet](http://apps.who.int/flumart/Default?ReportNo=12)_, the _[The WHO General Health Observatory data repository](http://apps.who.int/gho/data/node.main.HWF10?lang=en)_, and the _[The World Bank Open Data](http://apps.who.int/gho/data/node.main.HWF10?lang=en)_. We scraped demographic data from the _[CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)_, but eventually decided this data would not be used in our final report and analyses. 
 
 **Exploratory analysis:** 
-Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
+Throughout this process we have been forced to change our direction multiple times. To start, we visualized the number of infections from each of the different zones, and then selected zones which had the most rigorous data available, including ___. This is seen here: 
 
-We visualized the number of infections from each of the different zones, and then selected zones which had the most rigorous data available, including ___. 
+After meeting with our TA for guidance on this project, we heavily considered pursuing logistic regression and time-series but due to many coding challenges in our current capacity, in this exploratory project we prioritized a strong foundation in techniques we are famiiliar with. In this report, we utilized our modeling framework with epidemic thresholds and expected values, and also pursued linear regression. We ran a regression to calculate an epidemic threshold curve for each influenza transmission zone that we selected. 
 
-We ran a regression to calculate an epidemic threshold curve for each influenza transmission zone that we selected. 
+_Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas._
+
+
+Along the way, there were many challenges that we had to overcome. This included the scale of the data and at many times the lack of granularity. Some data is countrywide, while others at a regional level. Also, we found that we may not be able to use many desirable factors such as density and urbanization which are possible confounders since these were reported annually, whereas epidemiological data is often reported at a per-week basis. Furthermore, the many different sources for our data meant we faced challenges merging the datasets. 
 
 **Additional analysis:** 
 If you undertake formal statistical analyses, describe these in detail
 
 **Discussion:** 
 What were your findings? Are they what you expect? What insights into the data can you make?
-
-**Motivation:** 
-All four of us are in the Infectious Disease Epidemiology Concentration and are interested in becoming aquainted with ID Epi modeling in R. 
-
-Last year, in 2018, nearly 80,000 people died from the flu in the US alone. 
-
-_Check out the article [here](https://www.cnn.com/2018/09/26/health/flu-deaths-2017--2018-cdc-bn/index.html)._
-
-Many scholars argue that there is an impending 'global threat of avian flu' due to rapid globalization and urbanization. 
-
-Understanding current patterns and trends of flu could be useful to build stronger epidemiological frameworks for disease surveillance and emergency preparedness. 
-
-Specifically, we want to examime the seasonality of inlfuenza in different regions in the world using country level influenza data.  
-
-Google flu trends
-
-**Final products/Deliverables:**
-
-Report, Statistical Analyses, Webpage, and Screencast
-
-**Anticipated data sources:** 
-
-_[The WHO FluNet](http://apps.who.int/flumart/Default?ReportNo=12)._
-
-_[The WHO General Health Observatory data repository](http://apps.who.int/gho/data/node.main.HWF10?lang=en)._
-
-_[The World Bank Open Data](http://apps.who.int/gho/data/node.main.HWF10?lang=en)._
-
-_[CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)_ (For demographic data - obtained through scraping)
 
 **Planned analyses:**
 
