@@ -14,11 +14,15 @@ title: Global Influenza Trends
 
 More information about the team can be found in the [Team](Experience.html) tab. 
 
-The Key Findings for the report can be found in the [Report](report.html) tab.
+The Key Findings for the report can be found below. The full report can be found in the [Report](report.html) tab.
 
 For the Repository utilized to construct the website can be found accessed [here](https://github.com/er2867/fluproject). The Repository utilized for data analysis and including our group's report can be accessed [here](https://github.com/mattperrotta/final_project)
 
 Our data files for this project can be found [here](https://drive.google.com/drive/folders/1FcazPStI8FsAdQDWsujyn_jsFByolMC0?usp=sharing).
+
+### Key Findings 
+
+INSERT SUMMARY HERE 
 
 ### Website Creation 
 
