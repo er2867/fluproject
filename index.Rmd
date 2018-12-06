@@ -12,11 +12,11 @@ title: Global Influenza Trends
 
 ###Project Scope
 
-The primary objective of this project and endeavour is to explore the tools necessary to work in the intersection of infectious disease epidemiology modeling and data science. Specifically, we wanted to examime the seasonality of inlfuenza in different regions in the world using country level influenza data.
+The primary objective of this project was to explore the tools necessary to work in the intersection of infectious disease epidemiology modeling and data science. Specifically, we wanted to examime the seasonality of influenza in different regions in the world using country-level influenza data.
 
 ###Data
 
-The following data was obtained from The WHO FLunet. We queried data from all 18 influenza transmission zones from year 2008 thru 2014.  In order to to calculate rates, we needed population data for each zone, which we obtained from the World Bank.  
+The data were obtained from The WHO FLunet. We queried data from all 18 influenza transmission zones from year 2008 thru 2014.  In order to to calculate rates, we needed population data for each zone, which we obtained from the World Bank.  
 
 ###Exploratory Analysis
 
@@ -24,13 +24,13 @@ For our exploratory analysis, we looked at the the number of cases world wide by
 
 ###Epidemic Threshold
 
-We fit an epidemic threshold curve for each of our chosen transmission zones in order to see when these regions have epidemics.  We decided to use a serfling regression model to estimate our curve.  We modeled a threshold based on CDC protocols, and were able to show how seasonality and transmission zone affect the [threshold](threshboard.html).  
+We fit an epidemic threshold curve for each of our chosen transmission zones in order to see when these regions have epidemics.  We decided to use a Serfling regression model to estimate our curve.  We modeled a threshold based on CDC protocols, and were able to show how seasonality and transmission zone affect the [threshold](threshboard.html).  
 
 ### Important Information and Links 
 
 More information about the team can be found in the [Team](Experience.html) tab. 
 
-The Key Findings for the report can be found below. The full report can be found in the [Report](report.html) tab.
+The Key Findings for the report can be found below. The full report can be found in the [Report](https://github.com/mattperrotta/final_project/blob/master/report_and_data.md) tab.
 
 For the Repository utilized to construct the website can be found accessed [here](https://github.com/er2867/fluproject). The Repository utilized for data analysis and including our group's report can be accessed [here](https://github.com/mattperrotta/final_project)
 
