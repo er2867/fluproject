@@ -1,8 +1,6 @@
 ---
-title: "Index"
+title: Global Influenza Trends 
 ---
-
-**Title:** Global Influenza Trends 
 
 ### Team Members
   * Thomas Carpino (tc2899)
