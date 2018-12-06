@@ -2,7 +2,7 @@
 title: "Exploratory Analysis"
 ---
 
-#Cases by Region and Year#
+####Cases by Region and Year####
 
 <img src="images/Flu1.png" style = "width:100%">
 
