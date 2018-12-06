@@ -2,6 +2,9 @@
 title: "Exploratory Analysis"
 ---
 
+###Cases by Region###
+<img src="images/Flu3.png" style = "width:100%">
+
 ####Cases by Region and Year####
 
 <img src="images/Flu1.png" style = "width:100%">
@@ -12,4 +15,12 @@ The zones with the most complete data are North America, Northern Europe, Oceani
 
 <img src="images/Flu2.png" style = "width:100%">
 
+
+We also looked at incidence by subtype (Influenza A vs. Influenza B)
+
+<img src="images/Flu_strain1.png" style = "width:100%">
+
+And by Influenza strain
+
+<img src="images/Flu_strain2.png" style = "width:100%">
 

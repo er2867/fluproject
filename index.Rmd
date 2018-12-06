@@ -22,4 +22,4 @@ Our data files for this project can be found [here](https://drive.google.com/dri
 
 ### Website Creation 
 
-Information about this website was created can be found under the [Our Project](about.html) tab. 
+Information about this website was created can be found under the [About the Site](about.html) tab. 
