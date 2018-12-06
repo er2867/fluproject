@@ -9,18 +9,12 @@ The primary objective of this project and endeavour is to explore the tools nece
 
 In exploring project ideas, we discussed feasability through the lens of data availability and our current knowledge of the field. The following includes some of our preliminary findings. 
 
-Last year, in 2018, nearly 80,000 people died from the flu in the US alone according to [this CNN article](https://www.cnn.com/2018/09/26/health/flu-deaths-2017--2018-cdc-bn/index.html).
+Last year, in 2018, nearly 80,000 people died from the flu in the US alone according to [this CNN article](https://www.cnn.com/2018/09/26/health/flu-deaths-2017--2018-cdc-bn/index.html). In fact, many scholars argue that there is an impending 'global threat of avian flu' due to rapid globalization and urbanization. 
 
-Many scholars argue that there is an impending 'global threat of avian flu' due to rapid globalization and urbanization. 
-
-Understanding current patterns and trends of flu could be useful to build stronger epidemiological frameworks for disease surveillance and emergency preparedness. 
-
-Specifically, we want to examime the seasonality of inlfuenza in different regions in the world using country level influenza data.  
-
-Google flu trends
+We find that understanding current patterns and trends of flu would be useful to build stronger epidemiological frameworks for disease surveillance and emergency preparedness. Specifically, we wanted to examime the seasonality of inlfuenza in different regions in the world using country level influenza data.  
 
 **Related work:** 
-Anything that inspired you, such as a paper, a web site, or something we discussed in class.
+Work on infectious disease modeling that was extremely interesting to us included the discussion about historic Methods for current statistical analysis of excess pneumonia-influenza deaths, found in [this NCBI article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1915276/). Additionally, the discussion during P8105 class (Data Science 1) about Google Flu Trends further inspired this exciting project. 
 
 **Initial questions:**
 What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
