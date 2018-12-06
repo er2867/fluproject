@@ -16,4 +16,6 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/er2867/
 output:
-  html_document
+  html_document:
+    theme: flatly
+    css: style.css
