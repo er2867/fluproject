@@ -5,7 +5,19 @@ title: "Report"
 This is our Key Findings from our Final Report. 
 
 **Motivation:**
-Provide an overview of the project goals and motivation.
+The primary objective of this project and endeavour is to explore the tools necessary to work in the intersection of infectious disease epidemiology modeling and data science. In fact, the four team members are a part of Mailman's Infectious Disease Epidemiology Concentration. 
+
+In exploring project ideas, we discussed feasability through the lens of data availability and our current knowledge of the field. The following includes some of our preliminary findings. 
+
+Last year, in 2018, nearly 80,000 people died from the flu in the US alone according to [this CNN article](https://www.cnn.com/2018/09/26/health/flu-deaths-2017--2018-cdc-bn/index.html).
+
+Many scholars argue that there is an impending 'global threat of avian flu' due to rapid globalization and urbanization. 
+
+Understanding current patterns and trends of flu could be useful to build stronger epidemiological frameworks for disease surveillance and emergency preparedness. 
+
+Specifically, we want to examime the seasonality of inlfuenza in different regions in the world using country level influenza data.  
+
+Google flu trends
 
 **Related work:** 
 Anything that inspired you, such as a paper, a web site, or something we discussed in class.
@@ -14,15 +26,9 @@ Anything that inspired you, such as a paper, a web site, or something we discuss
 What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
 
 **Data:**
-We pulled our data directly from the website of different sources via X
+We pulled our data directly from the website of different sources via CSV files from _[The WHO FluNet](http://apps.who.int/flumart/Default?ReportNo=12)_, the _[The WHO General Health Observatory data repository](http://apps.who.int/gho/data/node.main.HWF10?lang=en)_, and the _[The World Bank Open Data](http://apps.who.int/gho/data/node.main.HWF10?lang=en)_. 
 
-_[The WHO FluNet](http://apps.who.int/flumart/Default?ReportNo=12)._
-
-_[The WHO General Health Observatory data repository](http://apps.who.int/gho/data/node.main.HWF10?lang=en)._
-
-_[The World Bank Open Data](http://apps.who.int/gho/data/node.main.HWF10?lang=en)._
-
-_[CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)_ (For demographic data - obtained through scraping)
+We scraped demographic data from the _[CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)_, but eventually decided this data would not be used in our final report and analyses. 
 
 **Exploratory analysis:** 
 Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.
