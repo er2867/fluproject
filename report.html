@@ -187,13 +187,16 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="about.html">About this Site</a>
+  <a href="about.html">Our Project</a>
 </li>
 <li>
-  <a href="Experience.html">Team's Experience</a>
+  <a href="Experience.html">Team</a>
 </li>
 <li>
   <a href="Exploratory_Analysis.html">Exploratory Analysis</a>
+</li>
+<li>
+  <a href="report.html">Report</a>
 </li>
 <li>
   <a href="mailto:er2867@cumc.columbia.edu">
@@ -221,7 +224,44 @@ $(document).ready(function () {
 </div>
 
 
-<p>This is our report</p>
+<p>This is our Key Findings from our Final Report.</p>
+<p>The Final Report can be found in this Repo.</p>
+<p>Motivation: Provide an overview of the project goals and motivation.</p>
+<p>Related work: Anything that inspired you, such as a paper, a web site, or something we discussed in class.</p>
+<p>Initial questions: What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?</p>
+<p>Data: Source, scraping method, cleaning, etc.</p>
+<p>Exploratory analysis: Visualizations, summaries, and exploratory statistical analyses. Justify the steps you took, and show any major changes to your ideas.</p>
+<p>Additional analysis: If you undertake formal statistical analyses, describe these in detail</p>
+<p>Discussion: What were your findings? Are they what you expect? What insights into the data can you make?</p>
+<p><strong>Motivation:</strong></p>
+<p>All four of us are in the Infectious Disease Epidemiology Concentration and are interested in becoming aquainted with ID Epi modeling in R.</p>
+<p>Last year, in 2018, nearly 80,000 people died from the flu in the US alone. <em>Check out the article <a href="https://www.cnn.com/2018/09/26/health/flu-deaths-2017--2018-cdc-bn/index.html">here</a>.</em></p>
+<p>Many scholars argue that there is an impending ‘global threat of avian flu’ due to rapid globalization and urbanization.</p>
+<p>Understanding current patterns and trends of flu could be useful to build stronger epidemiological frameworks for disease surveillance and emergency preparedness.</p>
+<p>Specifically, we want to examime the seasonality of inlfuenza in different regions in the world using country level influenza data.</p>
+<p>Google flu trends</p>
+<p><strong>Final products/Deliverables:</strong></p>
+<p>Report, Statistical Analyses, Webpage, and Screencast</p>
+<p><strong>Anticipated data sources:</strong></p>
+<p><em><a href="http://apps.who.int/flumart/Default?ReportNo=12">The WHO FluNet</a>.</em></p>
+<p><em><a href="http://apps.who.int/gho/data/node.main.HWF10?lang=en">The WHO General Health Observatory data repository</a>.</em></p>
+<p><em><a href="http://apps.who.int/gho/data/node.main.HWF10?lang=en">The World Bank Open Data</a>.</em></p>
+<p><em><a href="https://www.cia.gov/library/publications/the-world-factbook/">CIA World Factbook</a></em> (For demographic data - obtained through scraping)</p>
+<p><strong>Planned analyses:</strong></p>
+<pre><code>* Logisitic Regression with outcome of epidemic threshold with interaction from various covariates
+* Linear Regression of rate vs seasonality</code></pre>
+<p><strong>Potential Indicators or Covariates:</strong></p>
+<pre><code>* Country or Region
+* Time or Year
+* Strain
+* GDP
+* Urbanization</code></pre>
+<p><strong>Visualizations:</strong></p>
+<pre><code>* Positive influenza cases over time, measured by year and epi week
+* Seasonal vs. pandemic influenza 
+* Seasonality of influenza by region and/or by strain</code></pre>
+<p><strong>Coding Challenges:</strong></p>
+<p>A few coding challenges that we expect to face are the scale of the data, and lack of granularity. The data is countrywide, and density and urbanization are possible confounders that we may not be able to control for. There is also different sources for our data, which can pose challenges merging the datasets.</p>
 
 
 
