@@ -7,27 +7,27 @@ The team consists of four MPH students, experienced in infectious disease epidem
 #Tom#
 <img src="images/Tom.jpeg" style = "width:20%">
 
-[LinkedIn](https://linkedin.com/in/tomcarpino/)
-
-[Email](mailto:tc2899@cumc.columbia.edu)
+ [LinkedIn](https://linkedin.com/in/tomcarpino/) 
+ 
+ [Email](mailto:tc2899@cumc.columbia.edu)
 
 #Matt#
 <img src="images/Matt.jpeg" style = "width:20%">
 
-[LinkedIn](https://www.linkedin.com/in/matthew-perrotta-41275654/)
+[LinkedIn](https://www.linkedin.com/in/matthew-perrotta-41275654/) 
 
 [Email](mailto:mp3653@cumc.columbia.edu)
 
 #Zach#
 <img src="images/Zach.jpeg" style = "width:20%">
 
-[LinkedIn](https://www.linkedin.com/in/georgekeefer/)
+[LinkedIn](https://www.linkedin.com/in/georgekeefer/) 
 
 [Email](mailto:gwk2111@cumc.columbia.edu)
 
 #Elliot#
 <img src="images/Me.png" style = "width:20%">
 
-[LinkedIn](https://www.linkedin.com/in/elliot-rozen-8168118a/)
+[LinkedIn](https://www.linkedin.com/in/elliot-rozen-8168118a/) 
 
 [Email](mailto:er2867@cumc.columbia.edu)
