@@ -1,0 +1,11 @@
+---
+title: "Media"
+---
+
+
+
+### Other Media
+
+TV shows, while commicly misrepresenting infectious diseases like influenza and SARS, provide a valuable service to the public health community. If you have a few minutes, please enjoy the following clips: 
+
+<iframe width="900" height="380" src="https://www.youtube.com/embed/hqCVB0tOSVQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
